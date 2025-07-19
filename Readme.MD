@@ -8,21 +8,22 @@ Este proyecto implementa y compara diferentes modelos de redes neuronales convol
 
 El proyecto está organizado por carpetas, una por cada modelo:
 
+```
 inteligencia/
 │
-├── CNNBASE/ # Modelo CNN base
-├── VGGBASE/ # Modelo basado en VGG16
-├── RESNETBASE/ # Modelo basado en ResNet50 (fine-tuning)
-├── MOBNETBASE/ # Modelo basado en MobileNetV2 (fine-tuning)
+├── CNNBASE/         # Modelo CNN base
+├── VGGBASE/         # Modelo basado en VGG16
+├── RESNETBASE/      # Modelo basado en ResNet50 (fine-tuning)
+├── MOBNETBASE/      # Modelo basado en MobileNetV2 (fine-tuning)
 │
-├── fotos/ # Imágenes propias sin clasificar
-├── train/ # Dataset FER2013 (ya separado por clase)
+├── fotos/           # Imágenes propias sin clasificar
+├── train/           # Dataset FER2013 (ya separado por clase)
 │
-├── final/ # Entorno virtual (ignorado en Git)
+├── final/           # Entorno virtual (ignorado en Git)
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
+```
 
 Cada carpeta de modelo incluye:
 
@@ -47,55 +48,62 @@ source final/bin/activate
 
 # 2. Instalar dependencias
 pip install -r requirements.txt
+```
 
-🚀 Cómo entrenar un modelo
+---
 
+## 🚀 Cómo entrenar un modelo
+
+```bash
 cd CNNBASE/
 python3 traincnn.py
-Repite el proceso para trainvgg.py, trainresnet.py, trainmobnet.py, etc., según el modelo que quieras ejecutar.
+```
 
-🧪 Cómo etiquetar imágenes propias
+Repite el proceso para `trainvgg.py`, `trainresnet.py`, `trainmobnet.py`, etc., según el modelo que quieras ejecutar.
 
+---
+
+## 🧪 Cómo etiquetar imágenes propias
+
+```bash
 cd RESNETBASE/
 python3 etiquetadoresnet.py
+```
 
 Esto generará:
 
-    Las imágenes etiquetadas en subcarpetas
+- Las imágenes etiquetadas en subcarpetas
+- Un archivo `.csv` con los resultados
+- Una gráfica de conteo por clase
 
-    Un archivo .csv con los resultados
+---
 
-    Una gráfica de conteo por clase
-
-📊 Métricas generadas
+## 📊 Métricas generadas
 
 Para cada modelo se generan automáticamente:
 
-    Accuracy y loss por época (*.png)
+- Accuracy y loss por época (`*.png`)
+- Matriz de confusión (`*.png`)
+- Resultados por clase (`*.csv`)
 
-    Matriz de confusión (*.png)
+---
 
-    Resultados por clase (*.csv)
-
-📚 Dataset
+## 📚 Dataset
 
 Se utiliza el dataset FER2013 con imágenes de 48x48 píxeles en escala de grises, clasificadas en 7 emociones:
 
-    Angry
+- Angry
+- Disgust
+- Fear
+- Happy
+- Sad
+- Surprise
+- Neutral
 
-    Disgust
+---
 
-    Fear
-
-    Happy
-
-    Sad
-
-    Surprise
-
-    Neutral
-
-👨‍💻 Autor
+## 👨‍💻 Autor
 
 Desarrollado por Emilmrk como parte de un estudio de comparación de modelos CNN para clasificación de emociones con FER2013.
 
+---
