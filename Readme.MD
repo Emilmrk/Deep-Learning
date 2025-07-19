@@ -13,8 +13,8 @@ inteligencia/
 │
 ├── CNNBASE/         # Modelo CNN base
 ├── VGGBASE/         # Modelo basado en VGG16
-├── RESNETBASE/      # Modelo basado en ResNet50 (fine-tuning)
-├── MOBNETBASE/      # Modelo basado en MobileNetV2 (fine-tuning)
+├── RESNETFER/      # Modelo basado en ResNet50 (fine-tuning)
+├── MOBILENET/      # Modelo basado en MobileNetV2 (fine-tuning)
 │
 ├── fotos/           # Imágenes propias sin clasificar
 ├── train/           # Dataset FER2013 (ya separado por clase)
