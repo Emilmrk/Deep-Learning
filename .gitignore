@@ -1,0 +1,26 @@
+# Entorno virtual
+final/
+
+# Archivos y carpetas de Python que no deben subirse
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# Modelos pesados
+*.h5
+
+# Resultados intermedios
+*.csv
+*.log
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Configuraciones de editores
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
